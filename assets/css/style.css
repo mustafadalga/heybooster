@@ -494,97 +494,141 @@
     }
     /*
 Custom Select
-https://codepen.io/THEORLAN2/pen/Kaewmw?editors=0010
 */
+    /** Custom Select **/
     
-    .icon_select_mate {
-        position: absolute;
-        top: 20px;
-        right: 2%;
-        font-size: 16px;
-        height: 22px;
-        transition: all 275ms;
+    .custom-select-wrapper {
+        min-width: 25rem;
+        position: relative;
+        display: inline-block;
+        user-select: none;
     }
     
-    .select_mate {
+    .custom-select-wrapper select {
+        display: none;
+    }
+    
+    .custom-select {
         position: relative;
-        float: left;
-        min-width: 300px;
-        width: 300px;
-        min-height: 60px;
-        font-family: 'Roboto';
-        font-weight: 300;
+        display: inline-block;
+    }
+    
+    .custom-select-trigger {
+        position: relative;
+        display: block;
+        width: 30rem;
+        padding: 0 84px 0 22px;
         font-size: 1.8rem;
-        background-color: transparent;
-        transition: all 375ms ease-in-out;
+        font-weight: 400;
         color: var(--white);
-        /* Oculto el elemento select */
+        line-height: 60px;
+        background: transparent;
+        border-radius: 4px;
+        cursor: pointer;
     }
     
-    .select_mate select {
+    .custom-select-trigger:after {
         position: absolute;
-        overflow: hidden;
-        height: 0px;
+        display: block;
+        content: '';
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        right: 25px;
+        margin-top: -3px;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all .4s ease-in-out;
+        transform-origin: 50% 0;
+    }
+    
+    .custom-select.opened .custom-select-trigger:after {
+        margin-top: 3px;
+        transform: rotate(-135deg) translateY(-50%);
+    }
+    
+    .custom-options {
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        right: 0;
+        min-width: 100%;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: var(--bs-md);
+        background: var(--white);
+        transition: all .4s ease-in-out;
         opacity: 0;
-        z-index: -1;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-15px);
     }
     
-    .cont_list_select_mate {
-        position: relative;
-        float: left;
-        width: 100%;
+    .custom-select.opened .custom-options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateY(0);
     }
     
-    .cont_select_int {
+    .custom-options:before {
         position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: 999;
-        overflow: hidden;
-        height: 0px;
-        width: 100%;
-        background-color: #fff;
-        padding: 0px;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        border-radius: 1rem;
-        box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
-        transition: all 375ms ease-in-out;
+        display: block;
+        content: '';
+        bottom: 100%;
+        right: 25px;
+        width: 7px;
+        height: 7px;
+        margin-bottom: -4px;
+        border-top: 1px solid #b5b5b5;
+        border-left: 1px solid #b5b5b5;
+        background: var(--white);
+        transform: rotate(45deg);
+        transition: all .4s ease-in-out;
     }
     
-    .cont_select_int li {
+    .option-hover:before {
+        background: #f9f9f9;
+    }
+    
+    .custom-option {
         position: relative;
-        float: left;
-        width: 100%;
-        border-bottom: 1px solid #e0e0e0;
-        background-color: var(--white);
+        display: block;
+        padding: 0 22px;
+        border-bottom: 1px solid #b5b5b5;
+        font-size: 1.4rem;
+        font-weight: 600;
         color: var(--nile-blue);
-        list-style-type: none;
-        padding: 10px 2%;
-        margin: 0px;
-        transition: all 275ms ease-in-out;
-        display: block;
+        line-height: 47px;
         cursor: pointer;
+        transition: all .4s ease-in-out;
+        padding: 0;
+        margin: 0 2.2rem;
     }
     
-    .cont_select_int li:last-child {
-        border-radius: 3px;
-        border-bottom: 0px;
+    .custom-option:first-of-type {
+        border-radius: 4px 4px 0 0;
     }
     
-    .cont_select_int li:hover {
-        background-color: var(--gallery);
+    .custom-option:last-of-type {
+        border-bottom: 0;
+        border-radius: 0 0 4px 4px;
     }
     
-    .cont_select_int .active {
-        background-color: var(--gallery);
+    .custom-option::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -2.2rem;
+        width: calc(100% + 4.4rem);
+        height: 100%;
     }
     
-    .selecionado_opcion {
-        padding: 20px 2%;
-        width: 96%;
-        display: block;
-        margin: 0px;
-        cursor: pointer;
+    .custom-option:hover::after,
+    .custom-option.selection::after {
+        background: #f9f9f9;
+        z-index: -1;
     }
     /*End Custom Select */
