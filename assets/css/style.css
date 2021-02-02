@@ -112,8 +112,8 @@
         }
         
         .container.open .main {
-            margin-left: 4rem;
-            width: calc(100% - 4rem);
+            margin-left: 6rem;
+            width: calc(100% - 6rem);
         }
         
         .aside__header {
@@ -426,6 +426,7 @@
         
         .filter-result-desc {
             font-size: 1.5rem;
+            width: 70%;
         }
         
         .filter-result-status {
@@ -485,6 +486,10 @@
                 transform: translateX(-30rem);
                 padding: 1.5rem 0 1.5rem 1.5rem;
             }
+            .container.open .main {
+                margin-left: 0;
+                width: 100%;
+            }
             .container.open .aside {
                 transform: translateX(0);
                 padding: 1.5rem 0;
@@ -522,6 +527,9 @@
             .filter-result-item {
                 flex-direction: column;
                 text-align: center;
+            }
+            .filter-result-desc {
+                width: 100%;
             }
             .btn_active-change-alert {
                 font-size: 1.8rem;
