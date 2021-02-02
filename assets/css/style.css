@@ -394,6 +394,7 @@
             display: flex;
             align-items: center;
             grid-gap: 2.5rem;
+            justify-content: space-between;
         }
         
         .filter-result-item .btn {

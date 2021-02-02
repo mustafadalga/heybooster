@@ -47,3 +47,23 @@ $(".custom-option").on("click", function() {
     $(this).parents(".custom-select").removeClass("opened");
     $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
 });
+
+
+
+// {JSON} Placeholder API
+
+
+const [post1, post2, post3, post4] = [document.querySelector('.urgent-item'), document.querySelector('.warning-item'), document.querySelector('.opportunity-item'), document.querySelector('.perfect-item')]
+const getRequest = async() => {
+    try {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        post1.querySelector('.filter-result-desc').textContent = response.data[0].title
+        post2.querySelector('.filter-result-desc').textContent = response.data[1].title
+        post3.querySelector('.filter-result-desc').textContent = response.data[2].title
+        post4.querySelector('.filter-result-desc').textContent = response.data[3].title
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+getRequest()
