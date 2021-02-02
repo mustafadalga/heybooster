@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Heybooster</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="aside">
+            <div class="aside__header">
+                <img src="assets/img/logo.png" alt="" class="logo">
+                <div class="hamburger-menu-wrap">
+                    <div class="hamburger-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="aside__body">
+                <ul class="aside__menu">
+                    <li class="menu__item active">
+                        <a href="#" class="menu__link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <i class="fas fa-dna"></i>
+                            <span>Connections</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <i class="fas fa-file"></i>
+                            <span>Explore Insights</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </aside>
+        <main class="main">
+            <section class="statistics">
+                <div class="statistics__header">
+                    <!-- Custom select structure -->
+                    <div class="select_mate" data-mate-select="active">
+                        <select name="" onchange="" onclick="return false;" id="">
+                            <option value="">Selection Brands </option>
+                            <option value="1">https://www.flo.com.tr/</option>
+                            <option value="2">http://kinetiks.com.tr</option>
+                            <option value="2">http://boyner.com.tr</option>
+                        </select>
+                        <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)" class="icon_select_mate"><svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                <path d="M0-.75h24v24H0z" fill="none" />
+                            </svg></span>
+                        <div class="cont_list_select_mate">
+                            <ul class="cont_select_int"> </ul>
+                        </div>
+                    </div>
+                    <!-- Custom select structure -->
+
+                </div>
+                <div class="statistics__body">
+                    <div class="statistic__card card-health">
+                        <div class="card__text">
+                            <h5 class="card__title">HEALTH SCORE</h5>
+                            <h3 class="card__percent">65</h3>
+                            <h6 class="card__last_percent">
+                                <span>Since Last Month</span>
+                                <span>+3.4 %</span>
+                            </h6>
+                        </div>
+                        <div class="card__logo">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="statistic__card card-recommendations">
+                        <div class="card__text">
+                            <h5 class="card__title">RECOMMENDATIONS</h5>
+                            <h3 class="card__percent">27</h3>
+                            <h6 class="card__last_percent">
+                                <span>Since Last Month</span>
+                                <span>+5 %</span>
+                            </h6>
+                        </div>
+                        <div class="card__logo">
+                            <i class="fas fa-grip-lines-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="statistic__card card-health">
+                        <div class="card__text">
+                            <h5 class="card__title">HEALTH SCORE</h5>
+                            <h3 class="card__percent">66</h3>
+                            <h6 class="card__last_percent">
+                                <span>Since Last Month</span>
+                                <span>+3.4 %</span>
+                            </h6>
+                        </div>
+                        <div class="card__logo">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="statistic__card card-recommendations">
+                        <div class="card__text">
+                            <h5 class="card__title">RECOMMENDATIONS</h5>
+                            <h3 class="card__percent">28</h3>
+                            <h6 class="card__last_percent">
+                                <span>Since Last Month</span>
+                                <span>+5 %</span>
+                            </h6>
+                        </div>
+                        <div class="card__logo">
+                            <i class="fas fa-grip-lines-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="content">
+                <div class="content__header">
+                    <div class="filters__section">
+                        <button class="btn-add-filter">
+                            <span>Add Filter</span>
+                            <img src="assets/img/close.svg" alt="">
+                        </button>
+                        <div class="filter-list">
+                            <div class="filter-item">
+                                <span>Google Analytics</span>
+                                <img src="assets/img/close-2.svg" alt="">
+                            </div>
+                            <div class="filter-item">
+                                <span>Brand Awareness</span>
+                                <img src="assets/img/close-2.svg" alt="">
+                            </div>
+                            <div class="filter-item">
+                                <span>PPC</span>
+                                <img src="assets/img/close-2.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="btn btn_active-change-alert">Active Change Alert</button>
+                </div>
+                <div class="content__body">
+                    <div class="filter-results">
+                        <div class="filter-result-item">
+                            <button class="btn btn-urgent">Urgent</button>
+                            <p class="filter-result-desc">Because of the Christmas Holiday, traffic to 'New Year theme Accesories is increasing,remove the out-of-stock product from the product lists.</p>
+                            <div class="filter-result-status">
+                                <div class="active-result-item">SEO</div>
+                                <span>Revenue Growth</span>
+                            </div>
+                            <button class="btn-filter-result-details">
+                                <img src="assets/img/arrow-right-1.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="filter-result-item">
+                            <button class="btn btn-warning">Warning</button>
+                            <p class="filter-result-desc">Because of the Christmas Holiday, traffic to 'New Year theme Accesories is increasing,remove the out-of-stock product from the product lists.</p>
+                            <div class="filter-result-status">
+                                <div class="active-result-item">PPC</div>
+                                <span>Brand Awareness</span>
+                            </div>
+                            <button class="btn-filter-result-details">
+                                <img src="assets/img/arrow-right-1.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="filter-result-item">
+                            <button class="btn btn-opportunity">Opportunity</button>
+                            <p class="filter-result-desc">Because of the Christmas Holiday, traffic to 'New Year theme Accesories is increasing,remove the out-of-stock product from the product lists.</p>
+                            <div class="filter-result-status">
+                                <div class="active-result-item">Analytics</div>
+                                <span>Cost Saving</span>
+                            </div>
+                            <button class="btn-filter-result-details">
+                                <img src="assets/img/arrow-right-1.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="filter-result-item">
+                            <button class="btn btn-perfect">Perfect</button>
+                            <p class="filter-result-desc">Because of the Christmas Holiday, traffic to 'New Year theme Accesories is increasing,remove the out-of-stock product from the product lists.</p>
+                            <div class="filter-result-status">
+                                <div class="active-result-item">CRO</div>
+                                <span>Accurate Measurement</span>
+                            </div>
+                            <button class="btn-filter-result-details">
+                                <img src="assets/img/arrow-right-1.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
