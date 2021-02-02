@@ -491,7 +491,7 @@
                 justify-content: flex-start;
             }
             .container.open .menu__link {
-                width: initial;
+                width: 100%;
                 text-align: initial;
                 display: flex;
             }
@@ -514,9 +514,18 @@
         }
         
         @media screen and (max-width: 768px) {
+            .menu__link span {
+                font-size: 1.5rem;
+            }
             .filter-result-item {
                 flex-direction: column;
                 text-align: center;
+            }
+            .btn_active-change-alert {
+                font-size: 1.8rem;
+            }
+            .filter-result-item .btn {
+                font-size: 2rem;
             }
         }
         
@@ -528,6 +537,12 @@
             .filter-list {
                 box-shadow: var(--bs-sm);
                 padding: 1.5rem;
+            }
+            .btn_active-change-alert {
+                font-size: 1.6rem;
+            }
+            .filter-result-item .btn {
+                font-size: 1.8rem;
             }
         }
         
