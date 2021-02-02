@@ -1,9 +1,9 @@
 /* Navigation Menu */
-var aside = document.querySelector('.aside');
+var container = document.querySelector('.container');
 var hamburger_menu = document.querySelectorAll('.hamburger-menu-wrap');
 hamburger_menu.forEach(element => {
     element.addEventListener('click', () => {
-        aside.classList.toggle('open')
+        container.classList.toggle('open')
     });
 });
 
