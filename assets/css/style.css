@@ -89,11 +89,13 @@
         box-shadow: var(--bs-sm);
         float: left;
         transition: transform 0.3s ease-in-out;
-        z-index: 2;
+        z-index: 3;
     }
     
     .aside.open {
         transform: translateX(0);
+        box-shadow: var(--bs-sm);
+        background: var(--white);
     }
     
     .aside__header {
@@ -108,6 +110,15 @@
     
     .hamburger-menu-wrap {
         padding: 1.5rem;
+    }
+    
+    .mobile-icon {
+        background-color: var(--white);
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        cursor: pointer;
+        z-index: 2;
     }
     
     .hamburger-menu {
@@ -450,16 +461,21 @@
     
     @media screen and (max-width: 1000px) {
         .aside {
-            transform: translateX(-25rem);
+            transform: translateX(-30rem);
             padding: 1.5rem 0 1.5rem 1.5rem;
         }
         .main {
             margin-left: 5rem;
             width: calc(100% - 5rem);
+            margin-left: 0;
+            width: 100%;
         }
         .statistic__card {
             width: 100%;
             max-width: initial;
+        }
+        .content {
+            padding: 3rem;
         }
     }
     

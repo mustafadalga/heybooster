@@ -1,9 +1,13 @@
 /* Navigation Menu */
 var aside = document.querySelector('.aside');
-var hamburger_menu = document.querySelector('.hamburger-menu-wrap')
-hamburger_menu.addEventListener('click', (event) => {
-    aside.classList.toggle('open')
+var hamburger_menu = document.querySelectorAll('.hamburger-menu-wrap');
+hamburger_menu.forEach(element => {
+    element.addEventListener('click', () => {
+        aside.classList.toggle('open')
+    });
 });
+
+
 
 
 
